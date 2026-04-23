@@ -13,7 +13,7 @@ public class EmployeeStackDemo {
         System.out.println("Stack after pushes: " + empActions);
         //Add one more employee action record
         empActions.push("work over time");
-        //display the updated Stack
+
         System.out.println("Stack after pushes: " + empActions);
 
 
