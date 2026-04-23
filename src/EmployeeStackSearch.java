@@ -4,7 +4,7 @@ public class EmployeeStackSearch {
         Stack<String> empActions = new Stack<>();
         //Add at least 5 employee action records using the push() method
         empActions.push("Start work");
-        empActions.push("Meating");
+        empActions.push("Meeting");
         empActions.push("Lunch Break");
         empActions.push("Writing report");
         empActions.push("leave work");
@@ -14,6 +14,10 @@ public class EmployeeStackSearch {
             Integer position =  empActions.search(action);
             System.out.println(action+ " : "+ position);
         }
+
+        //Use search() to find the position of 2 different employee actions
+        System.out.println("position of Meeting: " + empActions.search("Meeting"));
+        System.out.println("position of Meeting: " + empActions.search("Lunch Break"));
     }
 
 }
