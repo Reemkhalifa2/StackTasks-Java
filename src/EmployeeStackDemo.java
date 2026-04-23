@@ -9,6 +9,9 @@ public class EmployeeStackDemo {
         empActions.push("Writing report");
         empActions.push("leave work");
 
+        //Display all elements in the Stack
+        System.out.println("Stack after pushes: " + empActions);
+
 
     }
 
