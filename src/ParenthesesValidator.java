@@ -7,7 +7,11 @@ public class ParenthesesValidator {
         String test3 = "{}()";
         String test4 = "";
         String test5 = "(()[]{{}}))";
-
+        System.out.println(isBalanced(test1));
+        System.out.println(isBalanced(test2));
+        System.out.println(isBalanced(test3));
+        System.out.println(isBalanced(test4));
+        System.out.println(isBalanced(test5));
     }
 
     public static String isBalanced(String str) {
