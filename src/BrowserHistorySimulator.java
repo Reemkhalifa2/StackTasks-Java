@@ -22,6 +22,10 @@ public class BrowserHistorySimulator {
         urlsStack.pop();
         //check if stack id empty
         System.out.println(urlsStack.isEmpty());
+        urlsStack.push("www.chatghpt.com");
+        urlsStack.push("www.oracle.com");
+        //Display the final browsing history
+        System.out.println(urlsStack);
 
 
     }
