@@ -12,11 +12,17 @@ public class BrowserHistorySimulator {
         System.out.println(urlsStack);
         //Simulate pressing the "Back" button 2 times using pop()
         urlsStack.pop();
-
-
+        //.Check if the history is empty
+        System.out.println(urlsStack.isEmpty());
         urlsStack.pop();
         //display the current page
         System.out.println(urlsStack.peek() );
+        urlsStack.pop();
+        urlsStack.pop();
+        urlsStack.pop();
+        //check if stack id empty
+        System.out.println(urlsStack.isEmpty());
+
 
     }
 }
