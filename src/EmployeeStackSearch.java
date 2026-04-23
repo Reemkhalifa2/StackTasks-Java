@@ -38,7 +38,6 @@ public class EmployeeStackSearch {
         System.out.println("The iterator values are: ");
         while (value.hasNext()) {
             System.out.println(value.next());}
-
         //Display all actions with their index positions
         for (int i = 0; i < empActions.size(); i++) {
             System.out.println(i + ": " + empActions.get(i));
