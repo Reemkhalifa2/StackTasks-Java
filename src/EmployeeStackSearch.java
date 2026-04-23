@@ -18,6 +18,8 @@ public class EmployeeStackSearch {
         //Use search() to find the position of 2 different employee actions
         System.out.println("position of Meeting: " + empActions.search("Meeting"));
         System.out.println("position of Meeting: " + empActions.search("Lunch Break"));
+        //Use contains() to check if specific actions exist in the stack
+        System.out.println("did emp leave work: " + empActions.contains("leave work"));
     }
 
 }
