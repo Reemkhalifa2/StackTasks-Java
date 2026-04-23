@@ -17,9 +17,7 @@ public class BrowserHistorySimulator {
         urlsStack.pop();
         //display the current page
         System.out.println(urlsStack.peek() );
-        urlsStack.pop();
-        urlsStack.pop();
-        urlsStack.pop();
+        urlsStack.clear();
         //check if stack id empty
         System.out.println(urlsStack.isEmpty());
         urlsStack.push("www.chatghpt.com");
