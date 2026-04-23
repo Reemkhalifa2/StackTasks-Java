@@ -28,6 +28,13 @@ public class EmployeeStackSearch {
         for(String action : empActions){
             System.out.println(action);
         }
+
+        //Display all actions with their index positions
+        for (int i = 0; i < empActions.size(); i++) {
+            System.out.println(i + ": " + empActions.get(i));
+        }
+
+
     }
 
 }
