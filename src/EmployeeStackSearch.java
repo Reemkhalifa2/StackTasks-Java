@@ -1,3 +1,4 @@
+import java.util.Iterator;
 import java.util.Stack;
 public class EmployeeStackSearch {
     public static void main(String[] args) {
@@ -28,6 +29,15 @@ public class EmployeeStackSearch {
         for(String action : empActions){
             System.out.println(action);
         }
+
+        // Creating an iterator
+        Iterator value = empActions.iterator();
+
+        // Displaying the values
+        // after iterating through the stack
+        System.out.println("The iterator values are: ");
+        while (value.hasNext()) {
+            System.out.println(value.next());}
 
         //Display all actions with their index positions
         for (int i = 0; i < empActions.size(); i++) {
