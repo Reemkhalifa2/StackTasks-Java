@@ -15,7 +15,8 @@ public class BrowserHistorySimulator {
 
 
         urlsStack.pop();
-
+        //display the current page
+        System.out.println(urlsStack.peek() );
 
     }
 }
