@@ -21,7 +21,7 @@ public class EmployeeStackSearch {
         //Use contains() to check if specific actions exist in the stack
         System.out.println("did emp leave work: " + empActions.contains("leave work"));
 
-        //terate through the stack using a standard for loop (from top to bottom
+        //iterate through the stack using a standard for loop (from bottom to top)
         for(String action : empActions){
             System.out.println(action);
         }
