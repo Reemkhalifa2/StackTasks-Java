@@ -6,12 +6,15 @@ public class StringReversalAndPalindrome {
         String str3 = "all";
         String str4 = "Mom";
         String str5 = "LOL";
+
         System.out.println("---------- Test Case 1 ----------------");
         System.out.println("String " + str1);
         System.out.println("Reversed String " + reverseString(str1));
-        System.out.println("Palindrome Status  " + isPalindrome(str1));System.out.println("String " + str1);
-        System.out.println("Reversed String " + reverseString(str1));
         System.out.println("Palindrome Status  " + isPalindrome(str1));
+        System.out.println("---------- Test Case 2 ----------------");
+        System.out.println("String " + str4);
+        System.out.println("Reversed String " + reverseString(str4));
+        System.out.println("Palindrome Status  " + isPalindrome(str4));
 
 
     }
