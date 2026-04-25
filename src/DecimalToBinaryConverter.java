@@ -97,6 +97,7 @@ public class DecimalToBinaryConverter {
 
             decimal = decimal * 2 + digit;
         }
+
         return decimal;
     }
 }
