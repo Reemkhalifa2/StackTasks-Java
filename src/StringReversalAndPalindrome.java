@@ -42,7 +42,6 @@ public class StringReversalAndPalindrome {
 
         return result; // return reversed string
     }
-
     // Method to check if string is palindrome
     public static Boolean isPalindrome(String str) {
 
