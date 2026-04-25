@@ -9,13 +9,14 @@ public class StringReversalAndPalindrome {
         for(int i=0 ; i<str.length(); i++){
             reverse.push(str.charAt(i));
         }
-
         while(!reverse.isEmpty()){
                 result += reverse.pop();
             }
-
         return result;
-
+    }
+    public static Boolean isPalindrome(String str){
+        String reversed = reverseString(str);
+        return reversed.equalsIgnoreCase(str);
 
     }
 
