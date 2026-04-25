@@ -9,6 +9,7 @@ public class DecimalToBinaryConverter {
         Integer f = 5;
         System.out.println(decimalToBinary(a));
         displayConversionProcess(a);
+        System.out.println(binaryToDecimal("1100"));
 
     }
     public static String decimalToBinary(int decimal){
@@ -40,17 +41,14 @@ public class DecimalToBinaryConverter {
         }
         System.out.println(binaryStack);
     }
-    public static String binaryToDecimal(int decimal){
-        Stack<Integer> binaryStack = new Stack<>();
-        String binaryString = "";
-        while(decimal !=0){
-            binaryStack.push(decimal%2);
-            decimal = decimal/2;
+    public static int binaryToDecimal(String binary) {
+        int decimal = 0;
+        for (int i = 0; i < binary.length(); i++) {
+            int digit = binary.charAt(i)-'0' ;
+            decimal = decimal * 2 + digit;
         }
-        while(!binaryStack.isEmpty()){
-            binaryString += binaryStack.pop();
-        }
-        return binaryString;
+
+        return decimal;
     }
 
 }
