@@ -9,6 +9,7 @@ public class DecimalToBinaryConverter {
         Integer e = 78;
         Integer f = 5;
         System.out.println(decimalToBinary(a));
+        displayConversionProcess(a);
 
     }
     public static String decimalToBinary(int decimal){
@@ -22,5 +23,17 @@ public class DecimalToBinaryConverter {
            binaryString += binaryStack.pop();
         }
         return binaryString;
+    }
+    public static void displayConversionProcess(int decimal){
+        Stack<Integer> binaryStack = new Stack<>();
+        while(decimal !=0){
+            Integer quotient = decimal/2;
+            System.out.println("Quotient  :"+ quotient);
+            Integer remainder = decimal%2;
+            binaryStack.push(remainder);
+            System.out.println("Remainder : "+ remainder);
+            decimal = decimal/2;
+        }
+        System.out.println(binaryStack);
     }
 }
