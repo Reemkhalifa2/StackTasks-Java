@@ -7,9 +7,12 @@ public class DecimalToBinaryConverter {
         Integer d = -7;
         Integer e = 78;
         Integer f = 5;
-        System.out.println(decimalToBinary(a));
-        displayConversionProcess(a);
-        System.out.println(binaryToDecimal("1100"));
+        System.out.println("===========================");
+        System.out.printf("%-10s %-15s", "Decimal", "Binary");
+        System.out.println();
+        String binary = decimalToBinary(a);
+        System.out.printf("%-10d %-15s",a,binary);
+
 
     }
     public static String decimalToBinary(int decimal){
@@ -31,6 +34,10 @@ public class DecimalToBinaryConverter {
     }
     public static void displayConversionProcess(int decimal){
         Stack<Integer> binaryStack = new Stack<>();
+        if (decimal == 0) {
+            System.out.println("0 / 2 = 0, remainder = 0");
+        }
+        decimal = Math.abs(decimal);
         while(decimal !=0){
             Integer quotient = decimal/2;
             System.out.println("Quotient  :"+ quotient);
