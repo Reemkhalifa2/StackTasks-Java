@@ -8,10 +8,11 @@ public class DecimalToBinaryConverter {
         Integer e = 78;
         Integer f = 5;
         System.out.println("===========================");
-        System.out.printf("%-10s %-15s", "Decimal", "Binary");
+        System.out.printf("%-10s %-15s %-15s", "Decimal", "Binary", "Integer.toBinaryString()");
         System.out.println();
         String binary = decimalToBinary(a);
-        System.out.printf("%-10d %-15s",a,binary);
+        String javaBinary = Integer.toBinaryString(a);
+        System.out.printf("%-10d %-15s %-15s",a,binary, javaBinary);
 
 
     }
