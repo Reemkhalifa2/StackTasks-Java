@@ -116,5 +116,13 @@ public class InfixToPostfixConverter {
             System.out.println(operator + "operator precedence is 1");
         }
     }
+    static void isOperator(char ch){
+        if(ch == '*' || ch =='/'|| ch =='%'||ch == '^'|| ch == '+' || ch =='-'){
+            System.out.println(ch + " is an operator");
+        }else {
+            System.out.println(ch + " is not an operator");
+
+        }
+    }
 
 }
