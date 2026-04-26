@@ -15,13 +15,20 @@ public class InfixToPostfixConverter {
             }else{
                 if(ch=='('){
                     Postfix.push(ch);
+                } else if (ch == ')') {
+                    while (Postfix.peek()!='('){
+                        postfix += Postfix.pop();
+                    }
+                    Postfix.pop();
                 } else if (ch == '^') {
                     Postfix.push(ch);
                 } else if (ch == '*' || ch =='/'|| ch =='%') {
-                    if(Postfix.peek()=='+'||Postfix.peek()=='-'){
+                    if(Postfix.peek()!='^'){
                         Postfix.push(ch);
                     }else {
-
+                        if(!Postfix.isEmpty()){
+                            postfix += Postfix.pop();
+                        }
                     }
 
                 }
