@@ -3,12 +3,13 @@ import java.util.Stack;
 public class InfixToPostfixConverter {
     static Stack<Character> Postfix = new Stack<>();
     public static void main(String[] args) {
-        infixToPostfix("1+5*(4*8-5)-2");
-        System.out.println(Postfix);
+        String result =infixToPostfix("1+5*(4*8-5)-2");
+
+        System.out.println(evaluatePostfix(infixToPostfix(result)));
 
 
     }
-    public static void infixToPostfix(String infix){
+    public static String infixToPostfix(String infix){
         String postfix = "";
         for(int i=0; i<infix.length(); i++){
             char ch = infix.charAt(i);
@@ -44,7 +45,7 @@ public class InfixToPostfixConverter {
         while(!Postfix.isEmpty()){
             postfix += Postfix.pop();
         }
-        System.out.println(postfix);
+        return postfix;
     }
     public static Integer evaluatePostfix(String expression) {
 
@@ -56,7 +57,7 @@ public class InfixToPostfixConverter {
         // Stack to store numbers
         Stack<Integer> operandsStack = new Stack<>();
 
-        String[] exp = expression.split(" ");
+        String[] exp = expression.split("");
 
         for (String x : exp) {
 
