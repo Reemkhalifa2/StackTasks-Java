@@ -60,4 +60,5 @@ public class TextEditorWithUndoRedo {
         System.out.println("Undo stack: "+ undoOperations);
         System.out.println("Redo stack: "+ redoOperations);
     }
+
 }
