@@ -6,4 +6,12 @@ public class BrowserNavigationSystem {
     public static void main(String[] args) {
 
     }
+    static void visitPage(String url){
+        if(currentPage.isEmpty()){
+            currentPage = url;
+        }else{
+            backHistory.push(currentPage);
+            currentPage = url;
+        }
+    }
 }
