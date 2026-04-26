@@ -43,17 +43,17 @@ public class TowerOfHanoiSolver {
         Integer disk1 =-1;
         if(fromPeg == 'A'){
             if(!A.isEmpty()){
-                disk1=A.pop();
+                disk1=A.peek();
             }
         }
         if(fromPeg == 'B'){
             if(!B.isEmpty()){
-                disk1= B.pop();
+                disk1= B.peek();
             }
         }
         if(fromPeg == 'C'){
             if(!C.isEmpty()){
-                disk1=C.pop();
+                disk1=C.peek();
 
             }
         }
@@ -61,17 +61,17 @@ public class TowerOfHanoiSolver {
         Integer disk2 =-1;
         if(toPeg == 'A'){
             if(!A.isEmpty()){
-                disk2=A.pop();
+                disk2=A.peek();
             }
         }
         if(toPeg == 'B'){
             if(!B.isEmpty()){
-                disk2= B.pop();
+                disk2= B.peek();
             }
         }
         if(toPeg == 'C'){
             if(!C.isEmpty()){
-                disk2=C.pop();
+                disk2=C.peek();
 
             }
         }
