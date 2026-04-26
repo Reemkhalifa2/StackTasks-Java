@@ -4,11 +4,7 @@ public class TextEditorWithUndoRedo {
     static Stack<String> redoOperations = new Stack<>();
     static StringBuilder str = new StringBuilder();
     public static void main(String[] args) {
-        System.out.println(type("Heelo"));
-        System.out.println(type("Hi"));
-        System.out.println(undo());
-        System.out.println(type("welcome"));
-        System.out.println(redo());
+
 
     }
     public static StringBuilder type(String text){
@@ -17,10 +13,19 @@ public class TextEditorWithUndoRedo {
         return str;
     }
     public static StringBuilder undo(){
+        Integer undoLimit = 0;
+        if(undoLimit>=10){
+            undoOperations.clear();
+            redoOperations.clear();
+            undoLimit = 0;
+        }
         if(!str.isEmpty()){
             String undoStr = undoOperations.pop();
             redoOperations.push(undoStr);
             str =str.delete(str.length()-undoStr.length(), str.length());
+            undoLimit ++;
+        }else{
+            System.out.println("There is nothing to undo");
         }
         return str;
     }public static StringBuilder redo(){
@@ -28,6 +33,8 @@ public class TextEditorWithUndoRedo {
             String redoStr = redoOperations.pop();
             undoOperations.push(redoStr);
             str.append(redoStr);
+        }else{
+            System.out.println("There is nothing to redo");
         }
         return str;
     }
