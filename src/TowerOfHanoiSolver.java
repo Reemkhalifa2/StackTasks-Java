@@ -6,4 +6,13 @@ public class TowerOfHanoiSolver {
     public static void main(String[] args) {
 
     }
+    void initializePegs(int numDisks){
+        for(int i =numDisks; i!=0;i--){
+            A.push(i);
+        }
+    }
+
+
+
+
 }
