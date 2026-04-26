@@ -21,4 +21,10 @@ public class BrowserNavigationSystem {
             currentPage = backHistory.pop();
         }
     }
+    void goForward() {
+        if(!forwardHistory.isEmpty()){
+            backHistory.push(currentPage);
+            currentPage = forwardHistory.pop();
+        }
+    }
 }
