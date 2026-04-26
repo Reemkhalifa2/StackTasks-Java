@@ -4,10 +4,10 @@ public class BrowserNavigationSystem {
     static Stack<String> forwardHistory = new Stack<>();
     static String  currentPage ="";
     public static void main(String[] args) {
-        visitPage("aaa");
+        visitPage("www.youtube.com");
         showHistory();
         showCurrentPage();
-        visitPage("bbb");
+        visitPage("www.github.com");
         showHistory();
         showCurrentPage();
         goBack();
@@ -16,12 +16,11 @@ public class BrowserNavigationSystem {
         goForward();
         showHistory();
         showCurrentPage();
-        visitPage("ccc");
+        visitPage("www.medium.com");
         goBack();
-        visitPage("ddd");
+        visitPage("www.digitalocean.com");
         showHistory();
         showCurrentPage();
-
 
     }
     static void visitPage(String url){
