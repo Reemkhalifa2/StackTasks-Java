@@ -4,20 +4,34 @@ public class HtmlTagValidator {
         System.out.println(validateHtmlTags());
 
     }
-    public static String validateHtmlTags(String html){
+    public static Boolean validateHtmlTags(String html){
         Stack<String> tagsStack = new Stack<>();
-        String tag ="";
-        for(int i=0; i <html.length();i++){
 
+        for(int i=0; i <html.length();i++){
+            String tag ="";
             if(html.charAt(i) == '<'){
                 for(int j=i; j<html.length(); j++){
                     if(html.charAt(j)=='>'){
                         tag  = html.substring(i+1, j);
+                        if(tag.endsWith("/")){
+                            continue;
+                        } else if (tag.endsWith("/")) {
+                            if(tagsStack.isEmpty()){
+                                return false;
+                            }
+                            if(tag.equals(tagsStack.pop()) ){
+                                continue;
+                            }else{
+                                return false;
+                            }
+
+                        }
+
                     }
                 }
-
             }
+
         }
-        return tag;
+
     }
 }
