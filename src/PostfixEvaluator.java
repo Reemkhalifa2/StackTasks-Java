@@ -77,7 +77,6 @@ public class PostfixEvaluator {
                 operandsStack.push(result);
             }
         }
-
         // Final result (last element in stack)
         return operandsStack.pop();
     }
