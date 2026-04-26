@@ -3,8 +3,20 @@ import java.util.Stack;
 public class HtmlTagValidator {
 
     public static void main(String[] args) {
-        String html = "<div><b>text</b></div>";
-        System.out.println(validateHtmlTags(html));
+        String[] html = {
+                "<div><b>text</b></div>",
+                "<div><b>wrong</i></div>",
+                "<html><body><h1>Title</h1></body></html>",
+                "<br/>",
+                "<div><p></div></p>",
+                "",
+                "<img src='x'/>",
+                "<b><i></i></b>"
+        };
+
+        for (String h : html) {
+            System.out.println(validateHtmlTags(h));
+        }
     }
     public static boolean validateHtmlTags(String html) {
         Stack<String> tagsStack = new Stack<>();
