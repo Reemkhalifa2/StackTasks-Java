@@ -39,8 +39,43 @@ public class TowerOfHanoiSolver {
         }
 
     }
-    void isValidMove(char fromPeg, char toPeg){
+    public static Boolean isValidMove(char fromPeg, char toPeg){
+        Integer disk1 =-1;
+        if(fromPeg == 'A'){
+            if(!A.isEmpty()){
+                disk1=A.pop();
+            }
+        }
+        if(fromPeg == 'B'){
+            if(!B.isEmpty()){
+                disk1= B.pop();
+            }
+        }
+        if(fromPeg == 'C'){
+            if(!C.isEmpty()){
+                disk1=C.pop();
 
+            }
+        }
+
+        Integer disk2 =-1;
+        if(toPeg == 'A'){
+            if(!A.isEmpty()){
+                disk2=A.pop();
+            }
+        }
+        if(toPeg == 'B'){
+            if(!B.isEmpty()){
+                disk2= B.pop();
+            }
+        }
+        if(toPeg == 'C'){
+            if(!C.isEmpty()){
+                disk2=C.pop();
+
+            }
+        }
+        return disk2>disk1;
     }
 
 
