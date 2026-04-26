@@ -6,12 +6,12 @@ public class TowerOfHanoiSolver {
     public static void main(String[] args) {
 
     }
-    void initializePegs(int numDisks){
+    static void initializePegs(int numDisks){
         for(int i =numDisks; i!=0;i--){
             A.push(i);
         }
     }
-    void moveDisk(char fromPeg, char toPeg){
+    static void moveDisk(char fromPeg, char toPeg){
         Integer disk =-1;
         if(fromPeg == 'A'){
             if(!A.isEmpty()){
@@ -77,6 +77,24 @@ public class TowerOfHanoiSolver {
         }
         return disk2>disk1;
     }
+    static void solveHanoi(int n, char from, char to, char aux) {
+
+        // Base case
+        if (n == 1) {
+            moveDisk(from, to);
+            return;
+        }
+
+        // Step 1: move n-1 disks from source to auxiliary
+        solveHanoi(n - 1, from, aux, to);
+
+        // Step 2: move largest disk to destination
+        moveDisk(from, to);
+
+        // Step 3: move n-1 disks from auxiliary to destination
+        solveHanoi(n - 1, aux, to, from);
+    }
+
 
 
 
