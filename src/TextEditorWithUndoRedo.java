@@ -28,7 +28,8 @@ public class TextEditorWithUndoRedo {
             System.out.println("There is nothing to undo");
         }
         return str;
-    }public static StringBuilder redo(){
+    }
+    public static StringBuilder redo(){
         if(!redoOperations.isEmpty()){
             String redoStr = redoOperations.pop();
             undoOperations.push(redoStr);
@@ -37,5 +38,11 @@ public class TextEditorWithUndoRedo {
             System.out.println("There is nothing to redo");
         }
         return str;
+    }
+    public static void display(){
+        System.out.println("--------------------------");
+        System.out.println(str);
+        System.out.println("Undo stack: "+ undoOperations);
+        System.out.println("Redo stack: "+ redoOperations);
     }
 }
