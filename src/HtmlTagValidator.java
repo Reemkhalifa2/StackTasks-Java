@@ -1,38 +1,51 @@
 import java.util.Stack;
+
 public class HtmlTagValidator {
+
     public static void main(String[] args) {
-        System.out.println(validateHtmlTags());
-
+        String html = "<div><b>text</b></div>";
+        System.out.println(validateHtmlTags(html));
     }
-    public static Boolean validateHtmlTags(String html){
+    public static boolean validateHtmlTags(String html) {
         Stack<String> tagsStack = new Stack<>();
+        for (int i = 0; i < html.length(); i++) {
+            if (html.charAt(i) == '<') {
+                String tag = "";
+                for (int j = i + 1; j < html.length(); j++) {
+                    if (html.charAt(j) == '>') {
 
-        for(int i=0; i <html.length();i++){
-            String tag ="";
-            if(html.charAt(i) == '<'){
-                for(int j=i; j<html.length(); j++){
-                    if(html.charAt(j)=='>'){
-                        tag  = html.substring(i+1, j);
-                        //Handles self-closing tags (e.g., <br/>, <img src="..."/>)
-                        if(tag.endsWith("/")){
-                            continue;
-                        } else if (tag.endsWith("/")) {
-                            if(tagsStack.isEmpty()){
-                                return false;
-                            }
-                            if(tag.equals(tagsStack.pop()) ){
-                                continue;
-                            }else{
-                                return false;
-                            }
-
-                        }
-
+                        tag = html.substring(i + 1, j);
+                        i = j;
+                        break;
                     }
                 }
-            }
+                if (tag.equals("")) continue;
+                //Handles self-closing tags (e.g., <br/>, <img src="..."/>)
+                if (tag.endsWith("/")) {
+                    continue;
+                }
+                // closing tag
+                else if (tag.startsWith("/")) {
+                    String tagName = tag.substring(1).split(" ")[0];
 
+                    if (tagsStack.isEmpty()) {
+                        return false;
+                    }
+
+                    if (!tagsStack.pop().equals(tagName)) {
+                        return false;
+                    }
+                }
+
+                // opening tag
+                else {
+
+                    String tagName = tag.split(" ")[0];
+                    tagsStack.push(tagName);
+                }
+            }
         }
 
+        return tagsStack.isEmpty();
     }
 }
