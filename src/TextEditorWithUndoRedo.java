@@ -4,7 +4,22 @@ public class TextEditorWithUndoRedo {
     static Stack<String> redoOperations = new Stack<>();
     static StringBuilder str = new StringBuilder();
     public static void main(String[] args) {
-
+        type("Hello ");
+        display();
+        type("World ");
+        display();
+        type("Java ");
+        display();
+        undo();
+        display();
+        undo();
+        display();
+        redo();
+        display();
+        type("Stack ");
+        display();
+        undo();
+        display();
 
     }
     public static StringBuilder type(String text){
