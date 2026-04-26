@@ -12,33 +12,38 @@ public class TowerOfHanoiSolver {
         }
     }
     void moveDisk(char fromPeg, char toPeg){
-        Integer a =-1;
+        Integer disk =-1;
         if(fromPeg == 'A'){
             if(!A.isEmpty()){
-                A.pop();
+                disk=A.pop();
             }
         }
         if(fromPeg == 'B'){
             if(!B.isEmpty()){
-                B.pop();
+                disk= B.pop();
             }
         }
         if(fromPeg == 'C'){
             if(!C.isEmpty()){
-                C.pop();
+                disk=C.pop();
 
             }
         }
         if(toPeg == 'A'){
-            A.push(a);
+            A.push(disk);
         }
         if(fromPeg == 'B'){
-            B.push(a);
+            B.push(disk);
         }if(fromPeg == 'C'){
-            C.push(a);
+            C.push(disk);
         }
 
     }
+    void isValidMove(char fromPeg, char toPeg){
+
+    }
+
+
 
 
 
