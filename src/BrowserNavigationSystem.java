@@ -27,4 +27,7 @@ public class BrowserNavigationSystem {
             currentPage = forwardHistory.pop();
         }
     }
+    void showCurrentPage(){
+        System.out.println(currentPage);
+    }
 }
