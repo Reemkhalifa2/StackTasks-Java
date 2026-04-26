@@ -107,4 +107,14 @@ public class InfixToPostfixConverter {
         // Final result (last element in stack)
         return operandsStack.pop();
     }
+    static void getPrecedence(char operator){
+        if(operator == '^'){
+            System.out.println(operator + "operator precedence is 3");
+        }if(operator == '*' || operator =='/'|| operator =='%'){
+            System.out.println(operator + "operator precedence is 2");
+        }if(operator == '+' || operator =='-'){
+            System.out.println(operator + "operator precedence is 1");
+        }
+    }
+
 }
