@@ -7,6 +7,8 @@ public class TextEditorWithUndoRedo {
         System.out.println(type("Heelo"));
         System.out.println(type("Hi"));
         System.out.println(undo());
+        System.out.println(type("welcome"));
+        System.out.println(redo());
 
     }
     public static StringBuilder type(String text){
@@ -21,6 +23,12 @@ public class TextEditorWithUndoRedo {
             str =str.delete(str.length()-undoStr.length(), str.length());
         }
         return str;
-
+    }public static StringBuilder redo(){
+        if(!redoOperations.isEmpty()){
+            String redoStr = redoOperations.pop();
+            undoOperations.push(redoStr);
+            str.append(redoStr);
+        }
+        return str;
     }
 }
