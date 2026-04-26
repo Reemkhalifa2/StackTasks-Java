@@ -13,6 +13,7 @@ public class HtmlTagValidator {
                 for(int j=i; j<html.length(); j++){
                     if(html.charAt(j)=='>'){
                         tag  = html.substring(i+1, j);
+                        //Handles self-closing tags (e.g., <br/>, <img src="..."/>)
                         if(tag.endsWith("/")){
                             continue;
                         } else if (tag.endsWith("/")) {
