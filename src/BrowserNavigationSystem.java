@@ -7,11 +7,18 @@ public class BrowserNavigationSystem {
 
     }
     static void visitPage(String url){
+        forwardHistory.clear();
         if(currentPage.isEmpty()){
             currentPage = url;
         }else{
             backHistory.push(currentPage);
             currentPage = url;
+        }
+    }
+    void goBack(){
+        if(!backHistory.isEmpty()){
+            forwardHistory.push(currentPage);
+            currentPage = backHistory.pop();
         }
     }
 }
