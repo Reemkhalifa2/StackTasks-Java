@@ -48,7 +48,6 @@ public class HtmlTagValidator {
                         return false;
                     }
                 }
-
                 // opening tag
                 else {
 
