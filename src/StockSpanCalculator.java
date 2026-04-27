@@ -9,7 +9,6 @@ public class StockSpanCalculator {
 
     }
     static Integer[] calculateSpan(int[] prices){
-
         Integer[] span = new Integer[prices.length];
         for(int i= 0; i<prices.length; i++){
             while(!indices.isEmpty() && prices[indices.peek()] <= prices[i]){
@@ -22,8 +21,25 @@ public class StockSpanCalculator {
             }
             indices.push(i);
 
-                    }
+        }
         return span;
     }
+    static Integer[] calculateSpanBruteForce(int[] prices){
+        Integer[] span = new Integer[prices.length];
+        for(int i=0; i<prices.length; i++){
+            Integer currentSpan = 1;
+            for(int j =i-1; j>-1; j--){
+                if(prices[j] <= prices[i]){
+                    currentSpan++;
+                }else{
+                    break;
+                }
+            }
+            span[i] = currentSpan;
+
+        }
+        return span;
+    }
+
 
 }
