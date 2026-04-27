@@ -6,4 +6,13 @@ public class InfixExpressionEvaluator {
     public static void main(String[] args) {
 
     }
+    public static void evaluate(String expression){
+
+    }
+    static Boolean isOperator(char ch){
+        return (ch=='+'||ch=='-'||ch=='/'||ch=='*'||ch=='%'||ch=='^');
+    }
+
+
+
 }
