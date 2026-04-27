@@ -6,8 +6,12 @@ public class QueueUsingTwoStacks {
         enqueue(10);
         enqueue(20);
         enqueue(30);
+        System.out.println("InputStack: " + inputStack);
+
+        System.out.println("Queue Size: " + size());
 
         System.out.println(dequeue());
+        System.out.println("OutputStack: " + outputStack);
         System.out.println(dequeue());
         enqueue(40);
         System.out.println(peek());
