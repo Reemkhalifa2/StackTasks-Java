@@ -7,6 +7,7 @@ public class StockSpanCalculator {
         displayResults(prices, calculateSpanBruteForce(prices));
 
     }
+    
     static Integer[] calculateSpan(Integer[] prices){
         Integer[] span = new Integer[prices.length];
         for(int i= 0; i<prices.length; i++){
