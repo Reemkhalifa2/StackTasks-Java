@@ -1,6 +1,7 @@
 import java.util.Stack;
 
 public class NQueensSolver {
+
     static class Position {
         int row, col;
 
@@ -13,28 +14,28 @@ public class NQueensSolver {
             return "(" + row + "," + col + ")";
         }
     }
+
+    public static void main(String[] args) {
+        solve(4);
+    }
+
     public static void solve(int n) {
 
         Stack<Position> stack = new Stack<>();
         int row = 0;
-        int[] cols = new int[n]; // نتابع آخر عمود جربناه في كل row
-
+        int[] cols = new int[n];
         while (row >= 0) {
 
             boolean placed = false;
 
             while (cols[row] < n) {
-
                 Position pos = new Position(row, cols[row]);
-
                 if (isSafe(pos, stack)) {
                     stack.push(pos);
                     System.out.println("Push: " + pos);
-
                     displayBoard(stack, n);
-
-                    cols[row]++; // نحفظ مكاننا
-                    row++;       // ننزل للصف اللي بعده
+                    cols[row]++;
+                    row++;
 
                     if (row == n) {
                         System.out.println("✅ Solution: " + stack);
@@ -67,6 +68,7 @@ public class NQueensSolver {
             }
         }
     }
+
     public static boolean isSafe(Position pos, Stack<Position> queens) {
 
         for (Position q : queens) {
@@ -78,6 +80,7 @@ public class NQueensSolver {
         }
         return true;
     }
+
     public static void displayBoard(Stack<Position> queens, int n) {
 
         for (int i = 0; i < n; i++) {
@@ -99,5 +102,4 @@ public class NQueensSolver {
         System.out.println("Stack: " + queens);
         System.out.println();
     }
-
 }
