@@ -27,6 +27,9 @@ public class StackSorter {
         static Stack<Integer> sortStackRecursive(Stack<Integer> stack){
 
         }
+        static Stack<Integer> insertInSortedOrder(Stack<Integer> stack, int value) {
+
+        }
 
 
 }
