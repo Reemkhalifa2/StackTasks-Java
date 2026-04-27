@@ -28,5 +28,7 @@ public class QueueUsingTwoStacks {
     static boolean isEmpty() {
         return inputStack.isEmpty() && outputStack.isEmpty();
     }
-
+    static int size() {
+        return inputStack.size() + outputStack.size();
+    }
 }
