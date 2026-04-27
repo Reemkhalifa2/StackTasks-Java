@@ -3,13 +3,12 @@ public class StackSorter {
     static Stack<Integer> unsortedStack = new Stack<>();
     static Stack<Integer>  temporaryStack = new Stack<>();
     public static void main(String[] args) {
-        Stack<Integer> input = new Stack<>();
-        input.push(34);
-        input.push(31);
-        input.push(98);
-        input.push(92);
-        input.push(23);
-        System.out.println(sortStack(input));
+        unsortedStack.push(34);
+        unsortedStack.push(31);
+        unsortedStack.push(98);
+        unsortedStack.push(92);
+        unsortedStack.push(23);
+        System.out.println(sortStack(unsortedStack));
 
     }
     static Stack<Integer> sortStack(Stack<Integer> stack){
@@ -23,7 +22,11 @@ public class StackSorter {
         }
         return temporaryStack;
 
-    }
+
+        }
+        static Stack<Integer> sortStackRecursive(Stack<Integer> stack){
+
+        }
 
 
 }
