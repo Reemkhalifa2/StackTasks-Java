@@ -67,5 +67,37 @@ public class NQueensSolver {
             }
         }
     }
+    public static boolean isSafe(Position pos, Stack<Position> queens) {
+
+        for (Position q : queens) {
+
+            if (q.col == pos.col) return false;
+
+            if (Math.abs(q.row - pos.row) == Math.abs(q.col - pos.col))
+                return false;
+        }
+        return true;
+    }
+    public static void displayBoard(Stack<Position> queens, int n) {
+
+        for (int i = 0; i < n; i++) {
+            for (int j = 0; j < n; j++) {
+
+                boolean found = false;
+
+                for (Position q : queens) {
+                    if (q.row == i && q.col == j) {
+                        found = true;
+                        break;
+                    }
+                }
+
+                System.out.print(found ? " Q " : " . ");
+            }
+            System.out.println();
+        }
+        System.out.println("Stack: " + queens);
+        System.out.println();
+    }
 
 }
