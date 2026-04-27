@@ -8,12 +8,10 @@ public class QueueUsingTwoStacks {
     static void enqueue(Integer i){
         inputStack.push(i);
     }
-    static void dequeue(Integer i){
-        if(!inputStack.isEmpty()){
+    static  Integer dequeue(Integer i){
+        while (!inputStack.isEmpty()){
             outputStack.push(inputStack.pop());
         }
-        if(!outputStack.isEmpty()){
-            outputStack.pop();
-        }
+        return outputStack.pop();
     }
 }
