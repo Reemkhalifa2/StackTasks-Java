@@ -9,6 +9,20 @@ public class InfixExpressionEvaluator {
     public static void evaluate(String expression){
 
     }
+    static double applyOperation(double a, double b, char operator) {
+        switch (operator) {
+            case '+': return a + b;
+            case '-': return a - b;
+            case '*': return a * b;
+            case '/':
+                if (b == 0) throw new ArithmeticException("Division by zero");
+                return a / b;
+            case '^': return Math.pow(a, b);
+            case '%': return a % b;
+        }
+
+        throw new RuntimeException("Invalid operator");
+    }
     static Integer getPrecedence(char operator){
         int precedence = -1;
         if(operator =='^'){
