@@ -24,10 +24,11 @@ public class StackSorter {
 
 
         }
-        static Stack<Integer> sortStackRecursive(Stack<Integer> stack){
+        static Stack<Integer> sortStack(Stack<Integer> stack){
 
                 while(!stack.isEmpty()){
                     int temp = stack.pop();
+                    sortStackRecursive(stack);
                 }
 
         }
