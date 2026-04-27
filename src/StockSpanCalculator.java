@@ -4,4 +4,8 @@ public class StockSpanCalculator {
     public static void main(String[] args) {
 
     }
+    static void calculateSpan(int[] prices){
+        
+    }
+
 }
