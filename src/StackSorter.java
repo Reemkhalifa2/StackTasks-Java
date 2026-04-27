@@ -5,5 +5,8 @@ public class StackSorter {
     public static void main(String[] args) {
 
     }
+    static void sortStack(Stack<Integer> stack){
+
+    }
 
 }
