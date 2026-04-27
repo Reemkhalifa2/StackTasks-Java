@@ -25,7 +25,10 @@ public class StackSorter {
 
         }
         static Stack<Integer> sortStackRecursive(Stack<Integer> stack){
-                int temp = -1;
+
+                while(!stack.isEmpty()){
+                    int temp = stack.pop();
+                }
 
         }
         static Stack<Integer> insertInSortedOrder(Stack<Integer> stack, int value) {
