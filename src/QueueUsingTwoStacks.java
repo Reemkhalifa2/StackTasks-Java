@@ -14,7 +14,9 @@ public class QueueUsingTwoStacks {
         System.out.println(dequeue());
         System.out.println(dequeue());
 
-
+        System.out.println("InputStack: " + inputStack);
+        System.out.println("OutputStack: " + outputStack);
+        System.out.println("Queue Size: " + size());
 
 
     }
