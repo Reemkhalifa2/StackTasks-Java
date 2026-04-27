@@ -3,6 +3,18 @@ public class QueueUsingTwoStacks {
     static Stack<Integer> inputStack = new Stack<>();
     static Stack<Integer> outputStack = new Stack<>();
     public static void main(String[] args) {
+        enqueue(10);
+        enqueue(20);
+        enqueue(30);
+
+        System.out.println(dequeue());
+        System.out.println(dequeue());
+        enqueue(40);
+        System.out.println(peek());
+        System.out.println(dequeue());
+        System.out.println(dequeue());
+
+
 
 
     }
