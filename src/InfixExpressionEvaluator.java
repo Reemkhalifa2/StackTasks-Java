@@ -2,11 +2,18 @@
 import java.util.Stack;
 public class InfixExpressionEvaluator {
     static Stack<Integer> operandStack = new Stack<>();
-    static Stack<Integer> operatorStack = new Stack<>();
+    static Stack<Character> operatorStack = new Stack<>();
     public static void main(String[] args) {
 
     }
     public static void evaluate(String expression){
+        for(int i= 0 ;i<expression.length(); i++){
+            char ch = expression.charAt(i);
+            if(isOperator(ch)){
+                operatorStack.push(ch);
+            }
+
+        }
 
     }
     static double applyOperation(double a, double b, char operator) {
