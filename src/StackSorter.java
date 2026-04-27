@@ -20,7 +20,7 @@ public class StackSorter {
                 stack.push(temporaryStack.pop());
             }
 
-
+            temporaryStack.push(temp);
         }
         return temporaryStack;
 
