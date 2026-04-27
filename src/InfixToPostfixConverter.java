@@ -3,9 +3,12 @@ import java.util.Stack;
 public class InfixToPostfixConverter {
     static Stack<Character> Postfix = new Stack<>();
     public static void main(String[] args) {
-        String result =infixToPostfix("1+5*(4*8-5)-2");
+        String infix ="1+5*(4*8-5)-2";
+        String postfix = infixToPostfix(infix);
+        System.out.println("Postfix: " + postfix);
 
-        System.out.println(evaluatePostfix(infixToPostfix(result)));
+        Integer result = evaluatePostfix(postfix);
+        System.out.println("Result: " + result);
 
 
     }
@@ -137,6 +140,10 @@ public class InfixToPostfixConverter {
                     throw new ArithmeticException("Cannot divide by zero");
                 }
                 return a / b;
+            case '%':
+                return a % b;
+            case '^':
+                return (int) Math.pow(a, b);
             default:
                 throw new IllegalArgumentException("Invalid operator");
         }
