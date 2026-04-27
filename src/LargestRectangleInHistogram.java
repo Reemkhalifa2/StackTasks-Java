@@ -5,7 +5,6 @@ public class LargestRectangleInHistogram {
         int[] arr2 = {2, 4};
         int[] arr3 = {1, 1, 1, 1};
         int[] arr4 = {5, 4, 3, 2, 1};
-
         for (int arr : arr2) {
             displayHistogram(arr2);
             int result = findLargestRectangle(arr2);
