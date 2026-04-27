@@ -20,6 +20,15 @@ public class MinStack {
         }
 
     }
+    static Integer pop() {
+
+        if (mainStack.isEmpty()) {
+            System.out.println("Stack is empty");
+            return -1;
+        }
+
+        
+    }
 
 
 }
