@@ -6,6 +6,6 @@ public class QueueUsingTwoStacks {
 
     }
     static void enqueue(Integer i){
-        inputStack.push()
+        inputStack.push(i);
     }
 }
