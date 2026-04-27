@@ -19,4 +19,12 @@ public class QueueUsingTwoStacks {
         }
         return outputStack.pop();
     }
+    static Integer peek(){
+        if(outputStack.isEmpty()){
+            System.out.println("Queue is empty!");
+        }
+        return outputStack.peek();
+    }
+
+    }
 }
