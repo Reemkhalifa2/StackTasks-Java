@@ -5,4 +5,7 @@ public class QueueUsingTwoStacks {
     public static void main(String[] args) {
 
     }
+    static void enqueue(Integer i){
+        inputStack.push()
+    }
 }
