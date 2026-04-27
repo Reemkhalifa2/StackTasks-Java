@@ -25,6 +25,8 @@ public class QueueUsingTwoStacks {
         }
         return outputStack.peek();
     }
-
+    static boolean isEmpty() {
+        return inputStack.isEmpty() && outputStack.isEmpty();
     }
+
 }
