@@ -6,6 +6,9 @@ public class StackSorter {
 
     }
     static void sortStack(Stack<Integer> stack){
+        for(Integer s : stack){
+
+        }
 
     }
 
