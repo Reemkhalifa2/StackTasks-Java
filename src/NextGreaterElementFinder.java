@@ -27,6 +27,7 @@ public class NextGreaterElementFinder {
         }
         return result;
     }
+
     public static int[] findNextGreaterElementCircular(int[] arr) {
         int[] result = new int[arr.length];
         Stack<Integer> st = new Stack<>();
