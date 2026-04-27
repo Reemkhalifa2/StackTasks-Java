@@ -2,13 +2,12 @@ import java.util.Stack;
 public class StockSpanCalculator {
     static Stack<Integer> indices = new Stack<>();
     public static void main(String[] args) {
-        Integer [] span = calculateSpan(new int[]{100, 80, 60, 70, 60, 75, 85});
-        for (Integer s : span) {
-            System.out.print(s + " ");
-        }
+        Integer[] prices = {100, 80, 60, 70, 60, 75, 85};
+        displayResults(prices, calculateSpan(prices));
+        displayResults(prices, calculateSpanBruteForce(prices));
 
     }
-    static Integer[] calculateSpan(int[] prices){
+    static Integer[] calculateSpan(Integer[] prices){
         Integer[] span = new Integer[prices.length];
         for(int i= 0; i<prices.length; i++){
             while(!indices.isEmpty() && prices[indices.peek()] <= prices[i]){
@@ -40,6 +39,17 @@ public class StockSpanCalculator {
         }
         return span;
     }
+    static void displayResults(Integer[] prices, Integer[] spans){
+        System.out.println("\nPrices:");
+        for (int p : prices) {
+            System.out.print(p + " ");
+        }
+        System.out.println("\nSpans:");
+        for (int s : spans) {
+            System.out.print(s + " ");
+        }
+    }
+
 
 
 }
