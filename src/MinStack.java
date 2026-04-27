@@ -27,7 +27,10 @@ public class MinStack {
             return -1;
         }
 
-        
+        minStack.pop();
+
+
+        return mainStack.pop();
     }
 
 
