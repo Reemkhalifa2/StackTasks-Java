@@ -23,7 +23,7 @@ public class StockSpanCalculator {
         }
         return span;
     }
-    static Integer[] calculateSpanBruteForce(int[] prices){
+    static Integer[] calculateSpanBruteForce(Integer[] prices){
         Integer[] span = new Integer[prices.length];
         for(int i=0; i<prices.length; i++){
             Integer currentSpan = 1;
@@ -49,6 +49,8 @@ public class StockSpanCalculator {
             System.out.print(s + " ");
         }
     }
+
+
 
 
 
