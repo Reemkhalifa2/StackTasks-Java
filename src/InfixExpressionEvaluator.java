@@ -12,7 +12,9 @@ public class InfixExpressionEvaluator {
             if(isOperator(ch)){
                 operatorStack.push(ch);
             }
-
+            if(isNumber(ch)){
+                operandStack.push(Integer.parseInt(String.valueOf(ch)));
+            }
         }
 
     }
