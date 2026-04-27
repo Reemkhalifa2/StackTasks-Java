@@ -13,7 +13,7 @@ public class CelebrityFinder {
         return matrix[i][j] == 1;
     }
 
-    static int findCelebrity(int n) {
+    static int findCelebrityBruteForce(int n) {
 
         for (int i = 0; i < n; i++) {
             boolean isCelebrity = true;
