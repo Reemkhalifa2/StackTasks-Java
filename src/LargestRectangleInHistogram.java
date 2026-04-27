@@ -4,4 +4,8 @@ public class LargestRectangleInHistogram {
 
     }
 
+    static Integer findLargestRectangle(int[] heights){
+
+    }
+
 }
