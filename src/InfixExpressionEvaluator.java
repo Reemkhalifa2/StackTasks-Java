@@ -12,7 +12,9 @@ public class InfixExpressionEvaluator {
     static Boolean isOperator(char ch){
         return (ch=='+'||ch=='-'||ch=='/'||ch=='*'||ch=='%'||ch=='^');
     }
-
+    static Boolean isNumber(char ch){
+        return Character.isDigit(ch);
+    }
 
 
 }
