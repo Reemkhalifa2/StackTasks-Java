@@ -11,6 +11,16 @@ public class InfixExpressionEvaluator {
             char ch = expression.charAt(i);
             if(isOperator(ch)){
                 operatorStack.push(ch);
+            } else if (ch == '(') {
+                operatorStack.push(ch);
+            }
+            else if (ch == ')') {
+
+                while (operatorStack.peek() != '(') {
+                    applyOperation();
+                }
+
+                operatorStack.pop(); // remove '('
             }
             if(isNumber(ch)){
                 operandStack.push(Integer.parseInt(String.valueOf(ch)));
