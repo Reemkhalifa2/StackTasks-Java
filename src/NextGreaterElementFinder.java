@@ -2,6 +2,12 @@ import  java.util.Stack;
 public class NextGreaterElementFinder {
     public static void main(String[] args) {
 
+        int[] arr = {4, 5, 2, 10};
+        int[] result = findNextGreaterElement(arr);
+        displayResults(arr, result);
+        int[] result2 = findNextGreaterElementCircular(arr);
+        displayResults(arr, result2);
+
     }
     public static int[] findNextGreaterElement(int[] arr) {
         Stack<Integer> st = new Stack<>();
@@ -46,6 +52,22 @@ public class NextGreaterElementFinder {
 
         return result;
     }
-    displayResults(int[] arr, int[] result
+    public static void displayResults(int[] arr, int[] result) {
+
+        System.out.println("\nOriginal Array:");
+        for (int x : arr) {
+            System.out.print(x + " ");
+        }
+
+        System.out.println("\n\nNext Greater Element Result:");
+        System.out.println("Index\tValue\tNext Greater");
+        System.out.println("--------------------------------");
+
+        for (int i = 0; i < arr.length; i++) {
+            System.out.println(i + "\t" + arr[i] + "\t" + result[i]);
+        }
+
+        System.out.println("--------------------------------");
+    }
 
 }
