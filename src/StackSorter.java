@@ -15,6 +15,11 @@ public class StackSorter {
     static Stack<Integer> sortStack(Stack<Integer> stack){
         while(!stack.isEmpty()){
             int temp = stack.pop();
+            while(!temporaryStack.isEmpty() && temporaryStack.peek() > temp)
+            {
+                stack.push(temporaryStack.pop());
+            }
+
 
         }
         return temporaryStack;
