@@ -4,11 +4,16 @@ public class QueueUsingTwoStacks {
     static Stack<Integer> outputStack = new Stack<>();
     public static void main(String[] args) {
 
+
     }
     static void enqueue(Integer i){
         inputStack.push(i);
     }
-    static  Integer dequeue(Integer i){
+    static  Integer dequeue(){
+        if (isEmpty()) {
+            System.out.println("Queue is empty!");
+            return null;
+        }
         while (!inputStack.isEmpty()){
             outputStack.push(inputStack.pop());
         }
