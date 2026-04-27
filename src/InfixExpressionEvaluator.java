@@ -1,7 +1,7 @@
 
 import java.util.Stack;
 public class InfixExpressionEvaluator {
-    static Stack<Integer> operandStack = new Stack<>();
+    static Stack<Double> operandStack = new Stack<>();
     static Stack<Character> operatorStack = new Stack<>();
     public static void main(String[] args) {
 
@@ -17,13 +17,13 @@ public class InfixExpressionEvaluator {
             else if (ch == ')') {
 
                 while (operatorStack.peek() != '(') {
-                    applyOperation();
+                    operandStack.push(applyOperation(operandStack.pop() ,operandStack.pop(),operatorStack.pop() ));
                 }
 
                 operatorStack.pop(); // remove '('
             }
             if(isNumber(ch)){
-                operandStack.push(Integer.parseInt(String.valueOf(ch)));
+                operandStack.push(Double.parseDouble(String.valueOf(ch)));
             }
         }
 
