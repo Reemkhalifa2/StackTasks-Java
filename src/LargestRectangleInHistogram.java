@@ -1,6 +1,17 @@
 import java.util.Stack;
 public class LargestRectangleInHistogram {
     public static void main(String[] args) {
+        int[] arr1 = {2, 1, 5, 6, 2, 3};
+        int[] arr2 = {2, 4};
+        int[] arr3 = {1, 1, 1, 1};
+        int[] arr4 = {5, 4, 3, 2, 1};
+
+        for (int arr : arr2) {
+            displayHistogram(arr2);
+            int result = findLargestRectangle(arr2);
+            displayResult(arr2, result);
+            System.out.println("=====================");
+        }
 
     }
 
@@ -78,7 +89,7 @@ public class LargestRectangleInHistogram {
         }
         System.out.println();
     }
-    
+
     public static void displayResult(int[] heights, int maxArea) {
         System.out.print("Array: ");
         for (int h : heights) {
