@@ -10,7 +10,10 @@ public class QueueUsingTwoStacks {
     }
     static void dequeue(Integer i){
         if(!inputStack.isEmpty()){
-            outputStack.push(inputStack.pop())
+            outputStack.push(inputStack.pop());
+        }
+        if(!outputStack.isEmpty()){
+            outputStack.pop();
         }
     }
 }
