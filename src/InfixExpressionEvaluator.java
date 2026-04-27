@@ -23,7 +23,19 @@ public class InfixExpressionEvaluator {
                 operatorStack.pop(); // remove '('
             }
             if(isNumber(ch)){
-                operandStack.push(Double.parseDouble(String.valueOf(ch)));
+                if (isNumber(ch)) {
+
+                    StringBuilder num = new StringBuilder();
+
+                    while (i < expression.length() && isNumber(expression.charAt(i))) {
+                        num.append(expression.charAt(i));
+                        i++;
+                    }
+
+                    i--;
+
+                    operandStack.push(Double.parseDouble(num.toString()));
+                }
             }
         }
 
