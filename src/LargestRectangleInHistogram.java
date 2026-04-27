@@ -5,7 +5,9 @@ public class LargestRectangleInHistogram {
     }
 
     static Integer findLargestRectangle(int[] heights){
-
+        Stack<Integer> stack = new Stack<>();
+        Integer maxArea = 0;
+        Integer i = 0;
     }
 
 }
