@@ -9,6 +9,18 @@ public class InfixExpressionEvaluator {
     public static void evaluate(String expression){
 
     }
+    static Integer getPrecedence(char operator){
+        int precedence = -1;
+        if(operator =='^'){
+            precedence=3;
+        }
+        else if(operator=='/'||operator=='*'||operator=='%'){
+            precedence = 2;
+        }else if(operator=='+'||operator=='-'){
+            precedence = 1;
+        }
+        return precedence;
+    }
     static Boolean isOperator(char ch){
         return (ch=='+'||ch=='-'||ch=='/'||ch=='*'||ch=='%'||ch=='^');
     }
